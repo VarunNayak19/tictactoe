@@ -91,6 +91,18 @@ function Board({ marks, player, gameOver, setGameOver, setMarks, setPlayer }) {
         setGameOver(true)
       }
     }
+    if (winner !== 1 && winner !== 2 && marks[0] !== 0 &&
+      marks[1] !== 0 &&
+      marks[2] !== 0 &&
+      marks[3] !== 0 &&
+      marks[4] !== 0 &&
+      marks[5] !== 0 &&
+      marks[6] !== 0 &&
+      marks[7] !== 0 &&
+      marks[8] !== 0) {
+      setwinner(3);
+      setGameOver(true)
+    }
   }, [marks]);
 
   const changeMark = (i) => {
@@ -126,7 +138,10 @@ function Board({ marks, player, gameOver, setGameOver, setMarks, setPlayer }) {
       </div>
         :
         <div className='modalcss'>
-          <span>Player {winner} wins</span>
+          {
+            winner === 3 ? <span>Draw!</span> :
+              <span>Player {winner} wins</span>
+          }
           <div className='newGameButton' onClick={() => {
             window.location.reload();
           }}>New Game</div>
