@@ -1,0 +1,86 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+.heading {
+  font-size: 70px;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  margin-bottom: 50px;
+}
+.boardcss {
+  height: auto;
+  width: auto;
+  padding: 25px;
+  background-color: whitesmoke;
+}
+.boxcss {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  border: 5px solid black;
+  margin: 10px;
+}
+.flexify {
+  display: flex;
+}
+
+.mark1 {
+  background-image: url("./assets/close.png");
+}
+.mark2 {
+  background-image: url("./assets/vaginal.png");
+}
+.modalcss {
+  height: 300px;
+  width: 300px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.modalcss span {
+  font-size: 36px;
+}
+.newGameButton {
+  height: auto;
+  width: auto;
+  padding: 20px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: whitesmoke;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  .boxcss {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 3px solid black;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heading {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .boxcss {
+    width: 60px;
+    height: 60px;
+    margin: 3px;
+    border: 2px solid black;
+  }
+}
